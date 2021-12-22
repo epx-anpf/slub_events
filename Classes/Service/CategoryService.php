@@ -100,6 +100,7 @@ class CategoryService
 
         /** @var Category $category */
         foreach ($categories as $category) {
+            /** @extensionScannerIgnoreLine */
             $rootLine = $this->getRootLine($category);
             $rootUid = (int)GeneralUtility::trimExplode(',', $rootLine)[0];
             $root = $this->categoryRepository->findByUid($rootUid);
